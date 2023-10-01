@@ -3,7 +3,10 @@
   max-width: var(--container-width);
   margin: 0 auto;
 }
-
+.wrapper{
+  background: #61a5e6;
+  height: 100vh;
+}
 .header {
   background: var(--bg-header-color);
   padding: 30px 0;
@@ -20,6 +23,7 @@
 
   &__input{
     font-size: 25px;
+    border-bottom: 1px solid var(--light-color);
 
     &::placeholder{
       color: var(--light-color);
@@ -40,4 +44,9 @@
     font-size: 25px;
   }
 }
-
+.text{
+  font-size: 25px;
+}
+.icon{
+  width: 30px;
+}
