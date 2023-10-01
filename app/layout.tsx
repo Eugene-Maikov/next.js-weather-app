@@ -1,8 +1,11 @@
 import './styles/globals.scss'
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({subsets: ['latin']})
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+})
 
 export const metadata: Metadata = {
   title: 'React Weather App',
@@ -15,7 +18,7 @@ export default function RootLayout({children}: {
   return (
     <html lang="ru">
     <link rel="icon" href="/favicon.ico" sizes="any"/>
-    <body>{children}</body>
+    <body className={montserrat.className}>{children}</body>
     </html>
   )
 }

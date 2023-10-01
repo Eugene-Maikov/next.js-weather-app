@@ -17,6 +17,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "react-icons": "^4.11.0",
     "sass": "^1.68.0",
     "typescript": "latest"
   }

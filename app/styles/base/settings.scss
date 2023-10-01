@@ -10,11 +10,9 @@ html {
 
 body {
   margin: 0;
-  color: var(--text-color);
+  color: var(--light-color);
   background-color: var(--bg-color);
   font-family: var(--font-main);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img,
@@ -45,3 +43,4 @@ picture source {
   max-width: var(--container-width);
   margin: 0 auto;
 }
+
