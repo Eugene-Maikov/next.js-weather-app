@@ -3,6 +3,7 @@ import React, {useState} from "react"
 import style from './styles/Home.module.scss'
 import Input from "./component/Input"
 import Current from "./component/Current"
+import WeekForecast from "./component/WeekForecast"
 
 const Home = () => {
   const [data, setData] = useState({})
@@ -52,9 +53,9 @@ const Home = () => {
   } else { // Если город введен правильно выводить данные о погоде
     content = (
       <>
-        <div>
+        <div className={style.content}>
           <Current data={data}/>
-          {/*<WeekForecast data={data} />*/}
+          <WeekForecast data={data} />
         </div>
         <div>
           {/*<WeatherDeatils data={data} />*/}
