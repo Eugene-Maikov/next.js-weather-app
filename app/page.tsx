@@ -73,7 +73,7 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <main className={style.main}>
+      <main>
         <div className={style.container}>
             {content}
         </div>
