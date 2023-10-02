@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React, {useState} from "react"
 import style from './styles/Home.module.scss'
 import Input from "./component/Input"
 import Current from "./component/Current"
@@ -37,16 +37,16 @@ const Home = () => {
   // При первой загрузке
   if (Object.keys(data).length === 0 && error === "") {
     content = (
-      <div>
-        <h2>Добро пожаловать в Weather App</h2>
-        <p>Введите название города чтобы получить прогноз погоды</p>
+      <div className={style.message}>
+        <h2 className={style.message__title}>Добро пожаловать в Weather App</h2>
+        <p className={style.message__subtitle}>Введите название города чтобы получить прогноз погоды</p>
       </div>
     );
   } else if (error !== "") { // При ошибке
     content = (
-      <div>
-        <p className={style.text}>Город не найден</p>
-        <p className={style.text}>Введите верное название</p>
+      <div className={style.message}>
+        <h2 className={style.message__title}>Город не найден</h2>
+        <p className={style.message__subtitle}>Введите верное название</p>
       </div>
     );
   } else { // Если город введен правильно выводить данные о погоде
@@ -65,15 +65,19 @@ const Home = () => {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.header}>
+      <header className={style.header}>
         <div className={style.container}>
           <div className={style.header__inner}>
-            <Input handleSearch={handleSearch} setLocation={setLocation} />
+            <Input handleSearch={handleSearch} setLocation={setLocation}/>
             <div className={style.header__logo}>Weather App</div>
           </div>
         </div>
-      </div>
-      {content}
+      </header>
+      <main className={style.main}>
+        <div className={style.container}>
+            {content}
+        </div>
+      </main>
     </div>
   )
 }
