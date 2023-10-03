@@ -1,7 +1,7 @@
 "use client"
-import {getCurrentData} from "../utils/currentData";
-import {MdLocationOn} from "react-icons/md";
-import style from "@/app/styles/Home.module.scss";
+import {getCurrentData} from "../utils/currentData"
+import {MdLocationOn} from "react-icons/md"
+import style from "@/app/styles/Home.module.scss"
 
 // Типы
 interface CurrentProps {
@@ -21,8 +21,8 @@ interface CurrentProps {
 }
 
 const Current: React.FC<{ data: any }> = ({data}) => {
-  const currentData = getCurrentData(); //Сегодняшняя дата
-  const weatherIcon = data.current.condition.icon; //Иконка из API
+  const currentData = getCurrentData() //Сегодняшняя дата
+  const weatherIcon = data.current.condition.icon //Иконка из API
   return (
     <div className={style.today}>
       <div>
@@ -45,7 +45,7 @@ const Current: React.FC<{ data: any }> = ({data}) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Current;
+export default Current

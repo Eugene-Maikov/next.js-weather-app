@@ -4,6 +4,7 @@ import style from './styles/Home.module.scss'
 import Input from "./component/Input"
 import Current from "./component/Current"
 import WeekForecast from "./component/WeekForecast"
+import WeatherDetails from "./component/WeatherDetails"
 
 const Home = () => {
   const [data, setData] = useState({})
@@ -34,7 +35,7 @@ const Home = () => {
   }
 
   // Вывод контента
-  let content;
+  let content
   // При первой загрузке
   if (Object.keys(data).length === 0 && error === "") {
     content = (
@@ -42,26 +43,26 @@ const Home = () => {
         <h2 className={style.message__title}>Добро пожаловать в Weather App</h2>
         <p className={style.message__subtitle}>Введите название города чтобы получить прогноз погоды</p>
       </div>
-    );
+    )
   } else if (error !== "") { // При ошибке
     content = (
       <div className={style.message}>
         <h2 className={style.message__title}>Город не найден</h2>
         <p className={style.message__subtitle}>Введите верное название</p>
       </div>
-    );
+    )
   } else { // Если город введен правильно выводить данные о погоде
     content = (
       <>
         <div className={style.content}>
-          <Current data={data}/>
-          <WeekForecast data={data}/>
+          <Current data={data} />
+          <WeekForecast data={data} />
         </div>
         <div>
-          {/*<WeatherDeatils data={data} />*/}
+          <WeatherDetails data={data} />
         </div>
       </>
-    );
+    )
   }
 
   return (

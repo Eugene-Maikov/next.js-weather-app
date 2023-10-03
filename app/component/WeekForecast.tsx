@@ -1,6 +1,6 @@
 "use client"
-import {MdLocationOn} from "react-icons/md";
-import style from "@/app/styles/Home.module.scss";
+import {MdLocationOn} from "react-icons/md"
+import style from "@/app/styles/Home.module.scss"
 
 // Типы
 interface DayForecast {
