@@ -1,12 +1,17 @@
 :root {
-  --container-width: 1470px;
-  --container-padding: 15px;
+  --container-width: 1500px;
+  --container-padding: 30px;
+
+  @media screen and (max-width: 990px) {
+    --container-padding: 40px;
+  }
+  @media screen and (max-width: 990px) {
+    --container-padding: 20px;
+  }
 
   --font-main: Montserrat, Arial, sans-serif;
 
   --bg-color: #f3ecec;
   --light-color: #fff;
   --bg-header-color: #329ade;
-
-  --transition: all .4s ease-in-out;
 }

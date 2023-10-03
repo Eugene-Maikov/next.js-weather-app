@@ -22,7 +22,7 @@ interface WeekForecastProps {
   }
 }
 
-const WeekForecast = ({ data }: WeekForecastProps) => {
+const WeekForecast: React.FC<{ data: any }> = ({data}) => {
   return (
     <div className={style.week}>
       {data.forecast.forecastday.map((day, index) => (

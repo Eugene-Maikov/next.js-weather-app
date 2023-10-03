@@ -55,7 +55,7 @@ const Home = () => {
       <>
         <div className={style.content}>
           <Current data={data}/>
-          <WeekForecast data={data} />
+          <WeekForecast data={data}/>
         </div>
         <div>
           {/*<WeatherDeatils data={data} />*/}
@@ -76,9 +76,14 @@ const Home = () => {
       </header>
       <main>
         <div className={style.container}>
-            {content}
+          {content}
         </div>
       </main>
+      <footer className={style.footer}>
+        <div className={style.container}>
+          <a href="#">Ссылка на GitHub</a>
+        </div>
+      </footer>
     </div>
   )
 }
